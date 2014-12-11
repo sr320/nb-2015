@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://dl.dropboxusercontent.com/u/14117884/Andy/BGI%20Data.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>Assesing BGI Data Quality - &lt;em&gt;2.27.14&lt;/em&gt;</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<style type="text/css">
+/* Set the main font to Calibri, same 
+   as My Word 2010 uses. Also set the 
+   default font size to 11pt.
+ 
+   The maximum width to 35em enhances 
+   readability through optimal line 
+   length. Note: this setting is ignored
+   by Word/Libre Office*/
+body  {
+   font-family: Calibri;
+   font-size: 11pt;
+   background-color: white;
+   padding-top: 1em;
+   margin: auto;
+   max-width: 65em;
+}
+ 
+/* Set the paragraph margin and 
+   padding to 0 except for the bottom */
+p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10pt;
+}
+ 
+/* Center the table and add top/bottom margins */
+table{
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: none;
+}
+ 
+/* The tr padding/margin 0 is important for table
+   import, while the font needs to be specified as
+   font and not font-family/font-size due to limiations
+   in Libre Office */
+td, tr{
+  font: 10pt Arial;
+  padding: 0px;
+  margin: 0px;
+}
+ 
+/* The cell should have a little space to easy reading
+   although this section is mostly ignored by the 
+   Libre Office import */
+td {
+  padding: 4px;
+  padding-bottom: 2px;
+}
+ 
+/* Set the headings to correspond to Word-style */
+h1, h2, h3, h4, h5, h6 {
+  margin: 10pt 0pt 0pt 0pt;
+  font-family: Cambria;
+  font-weight: bold;
+}
+ 
+/* h1 has a slightly larger top margins 
+   so we re-set that from the other*/
+h1 {
+  margin: 24pt 0pt 0pt 0pt;
+  font-size: 14pt;
+  color: #365F91;
+}
+ 
+ 
+h2 {
+  font-size: 13pt;
+  color: #4F81BD;
+}
+ 
+h3 {
+  font-size: 11pt;
+  color: #4F81BD;
+}
+ 
+h4 {
+  font-size: 11pt;
+  font-weight: bold;
+  font-style: italic;
+  color: #4F81BD;
+}
+ 
+h5 {
+  font-size: 11pt;
+  font-weight: normal;
+  color: #243F5D;
+}
+ 
+h6 {
+  font-size: 11pt;
+  font-weight: normal;
+  font-style: italic;
+  color: #243F5D;
+}
+ 
+/* The following sections are mostly 
+   unrelated to Word/Libre Office imports */
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+ 
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+ 
+pre {  
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+ 
+pre code {
+   display: block; padding: 0.5em;
+}
+ 
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+ 
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+ 
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+ 
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter: none !important;
+      -ms-filter: none !important;
+   }
+ 
+   body {
+      font-size:11pt;
+      max-width:100%;
+   }
+ 
+   a, a:visited {
+      text-decoration: underline;
+   }
+ 
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+ 
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+ 
+   tr, img {
+      page-break-inside: avoid;
+   }
+ 
+   img {
+      max-width: 100% !important;
+   }
+ 
+   @page {
+      margin-top: 2cm;
+      margin-bottom: 1.5cm;
+      margin-left: 3cm;
+      margin-right: 3cm;
+   }
+ 
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+ 
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body>
+<h1 style="margin: 24pt 0pt 0pt 0pt;">Assesing BGI Data Quality - <em>2.27.14</em></h1>
+
+<hr>
+
+<pre><code class="r"><span class="comment">#load reqired packages</span>
+<span class="keyword">library</span><span class="paren">(</span><span class="string">"ggplot2"</span><span class="paren">)</span>
+<span class="keyword">library</span><span class="paren">(</span><span class="string">"reshape2"</span><span class="paren">)</span>
+<span class="keyword">library</span><span class="paren">(</span><span class="string">"scales"</span><span class="paren">)</span>
+<span class="keyword">library</span><span class="paren">(</span><span class="string">"RColorBrewer"</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code class="r"><span class="comment">#__Set the working directory__</span>
+<span class="comment">#setwd("~/Desktop/bgidata")</span>
+<span class="identifier">setwd</span><span class="paren">(</span><span class="string">"~/Dropbox-GoetzLab/Dropbox/Public/Andy/knitr Documents/bgidata_quality_assesment_2.26.14"</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code class="r"><span class="comment">#__Read in the data that I extracted from process_radtags log files. "melt" the data frames so that they can be plotted in ggplot__</span>
+
+<span class="comment">#list.files()</span>
+
+<span class="identifier">Anofim_BGI_1.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_1.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_2.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_2.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_3.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_3.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_4.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_4.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_5.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_5.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_6.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_6.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_7.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/Anofim_BGI_7.fq.gz.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_test1_SBFI.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/Anofim_test1_SBFI.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_test1_PSTI.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/Anofim_test1_PSTI.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_test2.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/Anofim_test2.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">AnofimSBFI_1.2.3.4.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/AnofimSBFI_1.2.3.4.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">miSeqRun1.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/miSeqRun1.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">miSeqRun2.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/miSeqRun2.barcode.stats"</span><span class="paren">)</span>
+
+<span class="comment">#raw reads</span>
+<span class="identifier">Anofim_BGI_1.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/1.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_2.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/2.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_3.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/3.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_4.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/4.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_5.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/5.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_6.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/6.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_7.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/7.barcode.stats"</span><span class="paren">)</span>
+
+
+<span class="identifier">raw.lane.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/lane.stats"</span><span class="paren">)</span>
+<span class="identifier">lane.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/lane.stats"</span><span class="paren">)</span>
+<span class="identifier">prev.lane.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/prev.lane.stats"</span>,<span class="identifier">col.names</span><span class="operator">=</span><span class="identifier">names</span><span class="paren">(</span><span class="identifier">lane.stats</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">lane.stats</span> <span class="operator">&lt;-</span> <span class="identifier">rbind</span><span class="paren">(</span><span class="identifier">raw.lane.stats</span>,<span class="identifier">lane.stats</span>,<span class="identifier">prev.lane.stats</span><span class="paren">)</span>
+
+
+<span class="comment">#melt the dataframes</span>
+<span class="identifier">Anofim_BGI_1.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_1.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_2.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_2.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_3.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_3.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_4.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_4.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_5.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_5.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_6.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_6.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_7.fq.gz.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_7.fq.gz.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_test1_PSTI.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_test1_PSTI.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_test1_SBFI.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_test1_SBFI.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_test2.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_test2.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">AnofimSBFI_1.2.3.4.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">AnofimSBFI_1.2.3.4.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">miSeqRun1.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">miSeqRun1.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">miSeqRun2.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">miSeqRun2.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+
+
+<span class="identifier">Anofim_BGI_1.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_1.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_2.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_2.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_3.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_3.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_4.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_4.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_5.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_5.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_6.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_6.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">Anofim_BGI_7.Raw</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">Anofim_BGI_7.Raw</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+
+<span class="identifier">lane.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">lane.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">2</span><span class="operator">:</span><span class="number">5</span><span class="paren">)</span><span class="paren">)</span>
+</code></pre>
+
+<p><strong>Lane performance</strong></p>
+
+<pre><code>## Error in eval(expr, envir, enclos): object 'Tile' not found
+</code></pre>
+
+<p><strong>Barcode stats for BGI run</strong></p>
+
+<p><img src="./AJ_BGI_files/unnamed-chunk-5-1.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-2.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-3.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-4.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"></p>
+
+<pre><code>## Warning: Removed 1 rows containing missing values (position_stack).
+</code></pre>
+
+<p style="text-align: center;"><img src="./AJ_BGI_files/unnamed-chunk-5-5.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"></p>
+
+<pre><code>## Warning: Removed 1 rows containing missing values (position_stack).
+</code></pre>
+
+<p><img src="./AJ_BGI_files/unnamed-chunk-5-6.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-7.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-8.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-9.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-10.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-11.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-12.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-13.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-5-14.svg" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="50%"></p>
+
+<p><strong>Barcode stats for the hiSeq runs at University of Oregon</strong></p>
+
+<p><img src="./AJ_BGI_files/unnamed-chunk-6-1.svg" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-6-2.svg" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-6-3.svg" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-6-4.svg" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="50%"></p>
+
+<p><strong>Barcode stats for miSeq runs</strong></p>
+
+<pre><code class="r"><span class="identifier">ggplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_bar</span><span class="paren">(</span><span class="identifier">data</span> <span class="operator">=</span> <span class="identifier">miSeqRun1.barcode.stats</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Barcode</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">value</span>,<span class="identifier">fill</span><span class="operator">=</span><span class="identifier">variable</span><span class="paren">)</span>,<span class="identifier">color</span><span class="operator">=</span><span class="string">"#444546"</span>,<span class="identifier">stat</span><span class="operator">=</span><span class="string">"identity"</span><span class="paren">)</span> <span class="operator">+</span> 
+  <span class="identifier">theme</span><span class="paren">(</span><span class="identifier">axis.text.x</span><span class="operator">=</span><span class="identifier">element_text</span><span class="paren">(</span><span class="identifier">angle</span><span class="operator">=</span><span class="number">90</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">scale_fill_manual</span><span class="paren">(</span><span class="identifier">values</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="string">"#397486"</span>,<span class="string">"#192730"</span>,<span class="string">"#D94B57"</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">scale_y_continuous</span><span class="paren">(</span><span class="identifier">labels</span> <span class="operator">=</span> <span class="identifier">comma</span>,<span class="identifier">limits</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">0</span>,<span class="number">8000000</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">labs</span><span class="paren">(</span><span class="identifier">title</span><span class="operator">=</span><span class="string">"Lane - miSeqRun1 - KMNJHrun_S1 "</span>,<span class="identifier">y</span><span class="operator">=</span><span class="string">"Number of Reads"</span><span class="paren">)</span>
+</code></pre>
+
+<p style="text-align: center;"><img src="./AJ_BGI_files/unnamed-chunk-7-1.svg" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" width="50%"></p>
+
+<pre><code class="r"><span class="identifier">ggplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_bar</span><span class="paren">(</span><span class="identifier">data</span> <span class="operator">=</span> <span class="identifier">miSeqRun2.barcode.stats</span>, <span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Barcode</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">value</span>,<span class="identifier">fill</span><span class="operator">=</span><span class="identifier">variable</span><span class="paren">)</span>,<span class="identifier">color</span><span class="operator">=</span><span class="string">"#444546"</span>,<span class="identifier">stat</span><span class="operator">=</span><span class="string">"identity"</span><span class="paren">)</span> <span class="operator">+</span> 
+  <span class="identifier">theme</span><span class="paren">(</span><span class="identifier">axis.text.x</span><span class="operator">=</span><span class="identifier">element_text</span><span class="paren">(</span><span class="identifier">angle</span><span class="operator">=</span><span class="number">90</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">scale_fill_manual</span><span class="paren">(</span><span class="identifier">values</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="string">"#397486"</span>,<span class="string">"#192730"</span>,<span class="string">"#D94B57"</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">scale_y_continuous</span><span class="paren">(</span><span class="identifier">labels</span> <span class="operator">=</span> <span class="identifier">comma</span>,<span class="identifier">limits</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">0</span>,<span class="number">8000000</span><span class="paren">)</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">labs</span><span class="paren">(</span><span class="identifier">title</span><span class="operator">=</span><span class="string">"Lane - miSeqRun2 - sablefishPstI1"</span>,<span class="identifier">y</span><span class="operator">=</span><span class="string">"Number of Reads"</span><span class="paren">)</span>
+</code></pre>
+
+<p style="text-align: center;"><img src="./AJ_BGI_files/unnamed-chunk-7-2.svg" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" width="50%"></p>
+
+<p><strong>Plot of the values for read depth vs percent utilized reads</strong></p>
+
+<pre><code class="r"><span class="identifier">prev.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/prev.ustacks.stats.txt"</span><span class="paren">)</span>
+<span class="identifier">cleaned.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_CleanedReads/ustacks.stats.txt"</span><span class="paren">)</span>
+<span class="identifier">raw.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"BGI_Run_RawReads/ustacks.stats.txt"</span><span class="paren">)</span>
+
+<span class="identifier">PE.pt.labs</span> <span class="operator">&lt;-</span> <span class="identifier">prev.ustacks.stats</span><span class="paren">[</span><span class="identifier">prev.ustacks.stats</span><span class="operator">$</span><span class="identifier">Lane</span><span class="operator">==</span><span class="string">"PE_Run_PSTI"</span>,<span class="paren">]</span>
+
+<span class="identifier">ggplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span>  <span class="identifier">geom_point</span><span class="paren">(</span><span class="identifier">data</span><span class="operator">=</span><span class="identifier">prev.ustacks.stats</span>,<span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Mean.Coverage.Depth</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">PercentUtilized</span>,<span class="identifier">fill</span><span class="operator">=</span><span class="identifier">Lane</span><span class="paren">)</span>,<span class="identifier">pch</span><span class="operator">=</span><span class="number">21</span>,<span class="identifier">color</span><span class="operator">=</span><span class="string">"black"</span>,<span class="identifier">size</span><span class="operator">=</span><span class="number">3</span>,<span class="identifier">alpha</span><span class="operator">=</span><span class="number">0.8</span><span class="paren">)</span> <span class="operator">+</span> 
+  <span class="identifier">scale_fill_brewer</span><span class="paren">(</span><span class="identifier">palette</span><span class="operator">=</span><span class="string">"Dark2"</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">labs</span><span class="paren">(</span><span class="identifier">title</span><span class="operator">=</span><span class="string">"Runs at University of Oregon"</span>,<span class="identifier">x</span><span class="operator">=</span><span class="string">"Mean Coverage Depth"</span>,<span class="identifier">y</span><span class="operator">=</span><span class="string">"% Utilized reads"</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">geom_text</span><span class="paren">(</span><span class="identifier">data</span><span class="operator">=</span><span class="identifier">PE.pt.labs</span>,<span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Mean.Coverage.Depth</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">PercentUtilized</span>,<span class="identifier">label</span><span class="operator">=</span><span class="identifier">Sample</span><span class="paren">)</span>,<span class="identifier">angle</span><span class="operator">=</span><span class="operator">-</span><span class="number">45</span>,<span class="identifier">hjust</span><span class="operator">=</span><span class="number">0</span>, <span class="identifier">vjust</span><span class="operator">=</span><span class="number">0.5</span>,<span class="identifier">size</span><span class="operator">=</span><span class="number">4</span>,<span class="identifier">position</span><span class="operator">=</span><span class="string">"dodge"</span><span class="paren">)</span>
+</code></pre>
+
+<p style="text-align: center;"><img src="./AJ_BGI_files/unnamed-chunk-8-1.svg" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="75%"></p>
+
+<pre><code class="r"><span class="identifier">ggplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_point</span><span class="paren">(</span><span class="identifier">data</span><span class="operator">=</span><span class="identifier">cleaned.ustacks.stats</span>,<span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Mean.Coverage.Depth</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">PercentUtilized</span>,<span class="identifier">fill</span><span class="operator">=</span><span class="identifier">Lane</span><span class="paren">)</span>,<span class="identifier">pch</span><span class="operator">=</span><span class="number">21</span>,<span class="identifier">color</span><span class="operator">=</span><span class="string">"black"</span>,<span class="identifier">size</span><span class="operator">=</span><span class="number">3</span>,<span class="identifier">alpha</span><span class="operator">=</span><span class="number">0.8</span><span class="paren">)</span> <span class="operator">+</span> 
+  <span class="identifier">scale_fill_brewer</span><span class="paren">(</span><span class="identifier">palette</span><span class="operator">=</span><span class="string">"Dark2"</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">labs</span><span class="paren">(</span><span class="identifier">title</span><span class="operator">=</span><span class="string">"BGI - 'Cleaned' Reads"</span>,<span class="identifier">x</span><span class="operator">=</span><span class="string">"Mean Coverage Depth"</span>,<span class="identifier">y</span><span class="operator">=</span><span class="string">"% Utilized reads"</span><span class="paren">)</span>
+</code></pre>
+
+<p style="text-align: center;"><img src="./AJ_BGI_files/unnamed-chunk-8-2.svg" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="75%"></p>
+
+<pre><code class="r"><span class="identifier">ggplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span>  <span class="identifier">geom_point</span><span class="paren">(</span><span class="identifier">data</span><span class="operator">=</span><span class="identifier">raw.ustacks.stats</span>,<span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Mean.Coverage.Depth</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">PercentUtilized</span>,<span class="identifier">fill</span><span class="operator">=</span><span class="identifier">Lane</span><span class="paren">)</span>,<span class="identifier">pch</span><span class="operator">=</span><span class="number">21</span>,<span class="identifier">color</span><span class="operator">=</span><span class="string">"black"</span>,<span class="identifier">size</span><span class="operator">=</span><span class="number">3</span>,<span class="identifier">alpha</span><span class="operator">=</span><span class="number">0.8</span><span class="paren">)</span> <span class="operator">+</span> 
+  <span class="identifier">scale_fill_brewer</span><span class="paren">(</span><span class="identifier">palette</span><span class="operator">=</span><span class="string">"Dark2"</span><span class="paren">)</span> <span class="operator">+</span>
+  <span class="identifier">labs</span><span class="paren">(</span><span class="identifier">title</span><span class="operator">=</span><span class="string">"BGI - Raw Reads"</span>,<span class="identifier">x</span><span class="operator">=</span><span class="string">"Mean Coverage Depth"</span>,<span class="identifier">y</span><span class="operator">=</span><span class="string">"% Utilized reads"</span><span class="paren">)</span>
+</code></pre>
+
+<p><img src="./AJ_BGI_files/unnamed-chunk-8-3.svg" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="75%">
+ <em>looks like lane #2 from BGI didn't really perform very well, but the others seem to look good.  This may resolve itself if it had something to do with how BGI processed the run.</em></p>
+
+<h3 style="margin: 10pt 0pt 0pt 0pt;">Combining the MiSeq Runs with Anofim_Test2 library #1</h3>
+
+<p><em>Comparing with the depth of the samples sequenced for the paired end library because they were sequenced at sufficient depth.</em>  </p>
+
+<pre><code class="r"><span class="identifier">Anofim_test2.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/Anofim_test2.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">miSeqRun1.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/miSeqRun1.barcode.stats"</span><span class="paren">)</span>
+<span class="identifier">miSeqRun2.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/miSeqRun2.barcode.stats"</span><span class="paren">)</span>
+
+<span class="identifier">miSeqCombined</span> <span class="operator">&lt;-</span> <span class="identifier">merge</span><span class="paren">(</span><span class="identifier">miSeqRun1.barcode.stats</span>,<span class="identifier">miSeqRun2.barcode.stats</span>, <span class="identifier">by</span><span class="operator">=</span><span class="string">"Barcode"</span><span class="paren">)</span>
+
+<span class="identifier">Total</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">2</span>,<span class="number">6</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">No.RadTag</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">3</span>,<span class="number">7</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">Low.Quality</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">4</span>,<span class="number">8</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">Retained</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">5</span>,<span class="number">9</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">Barcode</span> <span class="operator">&lt;-</span> <span class="identifier">as.character</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="operator">$</span><span class="identifier">Barcode</span><span class="paren">)</span>
+
+<span class="identifier">miSeqCombined</span> <span class="operator">&lt;-</span> <span class="identifier">data.frame</span><span class="paren">(</span><span class="identifier">cbind</span><span class="paren">(</span><span class="identifier">Barcode</span>,<span class="identifier">Total</span>,<span class="identifier">No.RadTag</span>,<span class="identifier">Low.Quality</span>,<span class="identifier">Retained</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">2</span><span class="paren">]</span> <span class="operator">&lt;-</span> <span class="identifier">as.numeric</span><span class="paren">(</span><span class="identifier">as.character</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">2</span><span class="paren">]</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">3</span><span class="paren">]</span> <span class="operator">&lt;-</span> <span class="identifier">as.numeric</span><span class="paren">(</span><span class="identifier">as.character</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">3</span><span class="paren">]</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">4</span><span class="paren">]</span> <span class="operator">&lt;-</span> <span class="identifier">as.numeric</span><span class="paren">(</span><span class="identifier">as.character</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">4</span><span class="paren">]</span><span class="paren">)</span><span class="paren">)</span>
+<span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">5</span><span class="paren">]</span> <span class="operator">&lt;-</span> <span class="identifier">as.numeric</span><span class="paren">(</span><span class="identifier">as.character</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="number">5</span><span class="paren">]</span><span class="paren">)</span><span class="paren">)</span>
+
+<span class="identifier">miSeqCombined</span> <span class="operator">&lt;-</span> <span class="identifier">merge</span><span class="paren">(</span><span class="identifier">miSeqCombined</span>,<span class="identifier">Anofim_test2.barcode.stats</span>, <span class="identifier">by</span><span class="operator">=</span><span class="string">"Barcode"</span><span class="paren">)</span>
+
+
+<span class="identifier">Total</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">2</span>,<span class="number">6</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">No.RadTag</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">3</span>,<span class="number">7</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">Low.Quality</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">4</span>,<span class="number">8</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">Retained</span> <span class="operator">&lt;-</span> <span class="identifier">apply</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="paren">[</span>,<span class="identifier">c</span><span class="paren">(</span><span class="number">5</span>,<span class="number">9</span><span class="paren">)</span><span class="paren">]</span>,<span class="number">1</span>,<span class="identifier">sum</span><span class="paren">)</span>
+<span class="identifier">Barcode</span> <span class="operator">&lt;-</span> <span class="identifier">as.character</span><span class="paren">(</span><span class="identifier">miSeqCombined</span><span class="operator">$</span><span class="identifier">Barcode</span><span class="paren">)</span>
+
+<span class="identifier">miSeqCombined</span> <span class="operator">&lt;-</span> <span class="identifier">data.frame</span><span class="paren">(</span><span class="identifier">cbind</span><span class="paren">(</span><span class="identifier">Barcode</span>,<span class="identifier">Total</span>,<span class="identifier">No.RadTag</span>,<span class="identifier">Low.Quality</span>,<span class="identifier">Retained</span><span class="paren">)</span><span class="paren">)</span>
+
+<span class="identifier">miSeqCombined.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">miSeqCombined</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code>## Warning: attributes are not identical across measure variables; they will
+## be dropped
+</code></pre>
+
+<pre><code class="r"><span class="identifier">miSeqCombined.barcode.stats</span><span class="operator">$</span><span class="identifier">value</span> <span class="operator">&lt;-</span> <span class="identifier">as.numeric</span><span class="paren">(</span><span class="identifier">miSeqCombined.barcode.stats</span><span class="operator">$</span><span class="identifier">value</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code class="r"><span class="identifier">PE.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/PE.barcode.stats"</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code>## Warning in read.table(file = file, header = header, sep = sep, quote =
+## quote, : incomplete final line found by readTableHeader on
+## 'Previous_Runs/PE.barcode.stats'
+</code></pre>
+
+<pre><code class="r"><span class="identifier">PE.barcode.stats</span> <span class="operator">&lt;-</span> <span class="identifier">melt</span><span class="paren">(</span><span class="identifier">PE.barcode.stats</span>,<span class="identifier">id.vars</span><span class="operator">=</span><span class="number">1</span>,<span class="identifier">measure.vars</span><span class="operator">=</span><span class="identifier">c</span><span class="paren">(</span><span class="number">5</span><span class="operator">:</span><span class="number">3</span><span class="paren">)</span><span class="paren">)</span>
+</code></pre>
+
+<p><img src="./AJ_BGI_files/unnamed-chunk-11-1.svg" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" width="50%"><img src="./AJ_BGI_files/unnamed-chunk-11-2.svg" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" width="50%">
+<em>It appears that we might have to sequence at much greater depth to actually get useable data from the pstI samples</em></p>
+
+<h3 style="margin: 10pt 0pt 0pt 0pt;">Updated summary stats from ustacks</h3>
+
+<p><strong>When samples sequenced more than once are combined into a single file, namely the miSeq runs combined with Anofim_Test2</strong>
+<img src="./AJ_BGI_files/unnamed-chunk-12-1.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-2.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-3.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-4.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-5.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-6.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-7.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"><img src="./AJ_BGI_files/unnamed-chunk-12-8.svg" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="75%"></p>
+
+<pre><code class="r"><span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">read.delim</span><span class="paren">(</span><span class="string">"Previous_Runs/comb.ustacks.txt"</span><span class="paren">)</span>
+
+<span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Lane</span><span class="operator">!=</span><span class="string">"Combined"</span>,<span class="paren">]</span>
+<span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Lane</span><span class="operator">!=</span><span class="string">"Anofim_Test_1"</span>,<span class="paren">]</span>
+<span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Lane</span><span class="operator">!=</span><span class="string">"Anofim_Test_2"</span>,<span class="paren">]</span>
+<span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Lane</span><span class="operator">!=</span><span class="string">"Anofim_Test_2 &amp; MiSeq"</span>,<span class="paren">]</span>
+<span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Lane</span><span class="operator">!=</span><span class="string">"PE_4.29.12"</span>,<span class="paren">]</span>
+
+<span class="identifier">comb.ustacks.stats</span> <span class="operator">&lt;-</span> <span class="identifier">comb.ustacks.stats</span>
+
+
+<span class="identifier">ggplot</span><span class="paren">(</span><span class="paren">)</span> <span class="operator">+</span> <span class="identifier">geom_point</span><span class="paren">(</span><span class="identifier">data</span><span class="operator">=</span><span class="identifier">comb.ustacks.stats</span>,<span class="identifier">aes</span><span class="paren">(</span><span class="identifier">x</span><span class="operator">=</span><span class="identifier">Total.Reads</span>,<span class="identifier">y</span><span class="operator">=</span><span class="identifier">Mean.Coverage.Depth</span>,<span class="identifier">fill</span><span class="operator">=</span><span class="identifier">Lane</span><span class="paren">)</span>,<span class="identifier">stat</span><span class="operator">=</span><span class="string">"identity"</span>,<span class="identifier">pch</span><span class="operator">=</span><span class="number">21</span>,<span class="identifier">color</span><span class="operator">=</span><span class="string">"black"</span>,<span class="identifier">alpha</span><span class="operator">=</span><span class="number">0.8</span><span class="paren">)</span>
+</code></pre>
+
+<p style="text-align: center;"><img src="./AJ_BGI_files/unnamed-chunk-13-1.svg" alt="plot of chunk unnamed-chunk-13"> </p>
+
+<pre><code class="r"><span class="identifier">mean.reads.lane</span> <span class="operator">&lt;-</span> <span class="identifier">mean</span><span class="paren">(</span><span class="identifier">c</span><span class="paren">(</span><span class="identifier">prev.lane.stats</span><span class="paren">[</span><span class="identifier">c</span><span class="paren">(</span><span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span><span class="paren">)</span>,<span class="number">6</span><span class="paren">]</span>,<span class="identifier">raw.lane.stats</span><span class="paren">[</span><span class="identifier">c</span><span class="paren">(</span><span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span><span class="paren">)</span>,<span class="number">6</span><span class="paren">]</span><span class="paren">)</span><span class="paren">)</span>
+
+<span class="identifier">mean.reads.lane</span> <span class="operator">/</span> <span class="identifier">mean</span><span class="paren">(</span><span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Mean.Coverage.Depth</span><span class="operator">==</span><span class="number">25</span>,<span class="number">4</span><span class="paren">]</span><span class="paren">)</span> 
+</code></pre>
+
+<pre><code>## [1] 86.22766
+</code></pre>
+
+<pre><code class="r"><span class="identifier">mean.reads.lane</span> <span class="operator">/</span> <span class="identifier">mean</span><span class="paren">(</span><span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Mean.Coverage.Depth</span><span class="operator">==</span><span class="number">20</span>,<span class="number">4</span><span class="paren">]</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code>## [1] 115.9562
+</code></pre>
+
+<pre><code class="r"><span class="identifier">mean.reads.lane</span> <span class="operator">/</span> <span class="identifier">mean</span><span class="paren">(</span><span class="identifier">comb.ustacks.stats</span><span class="paren">[</span><span class="identifier">comb.ustacks.stats</span><span class="operator">$</span><span class="identifier">Mean.Coverage.Depth</span><span class="operator">==</span><span class="number">10</span>,<span class="number">4</span><span class="paren">]</span><span class="paren">)</span>
+</code></pre>
+
+<pre><code>## [1] 255.1679
+</code></pre>
+
+
+
+
+</body></html>
