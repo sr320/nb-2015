@@ -1,0 +1,11 @@
+PASS	Basic Statistics	olyo-rad-01.fastq
+PASS	Per base sequence quality	olyo-rad-01.fastq
+PASS	Per sequence quality scores	olyo-rad-01.fastq
+WARN	Per base sequence content	olyo-rad-01.fastq
+FAIL	Per base GC content	olyo-rad-01.fastq
+WARN	Per sequence GC content	olyo-rad-01.fastq
+PASS	Per base N content	olyo-rad-01.fastq
+PASS	Sequence Length Distribution	olyo-rad-01.fastq
+WARN	Sequence Duplication Levels	olyo-rad-01.fastq
+PASS	Overrepresented sequences	olyo-rad-01.fastq
+FAIL	Kmer Content	olyo-rad-01.fastq
