@@ -1,3 +1,9 @@
 ./Cv/data/cvir.v1.fa
 
 Cv/data/cvir.v1.fa
+
+*.zip
+
+mykiss/data/Oncorhynchus_mykiss_scaffolds.fa.gz
+
+*.bam
