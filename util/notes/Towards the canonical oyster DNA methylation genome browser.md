@@ -8,6 +8,8 @@ First we need to start with the genome itself - and lets have a single working d
 
 And mirrored at <http://owl.fish.washington.edu/halfshell/index.php?dir=2015-05-comgenbro%2F>
 
+    /Volumes/web/halfshell/2015-05-comgenbro
+
 Metadata
 
 FileID   |   Description  | Source  
