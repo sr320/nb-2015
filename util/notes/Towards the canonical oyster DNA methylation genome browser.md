@@ -14,7 +14,8 @@ FileID   |   Description  | Source
 -----------|--------------------|-------------
 Crassostrea_gigas.GCA_000297895.1.26.gtf | gtf  |  [ftp](ftp://ftp.ensemblgenomes.org/pub/current/metazoa/gtf/crassostrea_gigas/)
 BiGill_CpG_methylation | gill methylation 5x | [paper](https://peerj.com/articles/215)
-BiGill_exon_clc_rpkm | Exon-specific gene expression values (RPKM) from RNA-seq analysis corresponding to `BiGill CpG` oyster |  [paper](https://peerj.com/articles/215)
+Bmbd | MBD-seq ?tissue | [paper](differetn)
+BiGill_exon_clc_rpkm | Corresponding exon-specific gene expression |  [paper](https://peerj.com/articles/215)
 BiGo_CpG_methylation | male gamete methylation 5x  | [paper](http://journal.frontiersin.org/Journal/10.3389/fphys.2014.00224/abstract)
 M1 | male gamete methylation 5x | [preprint](http://biorxiv.org/content/early/2015/03/13/012831)
 M3 | male gamete methylation 5x | [preprint](http://biorxiv.org/content/early/2015/03/13/012831)
@@ -22,6 +23,7 @@ T1D3 | 72hpf larvae from `M1` 5x | [preprint](http://biorxiv.org/content/early/2
 T1D5 | 120hpf larvae from `M1` 5x  | [preprint](http://biorxiv.org/content/early/2015/03/13/012831)
 T3D3 | 72hpf larvae from `M3` 5x  | [preprint](http://biorxiv.org/content/early/2015/03/13/012831)
 T3D5 | 120hpf larvae from `M3` 5x | [preprint](http://biorxiv.org/content/early/2015/03/13/012831)
+&probes& | probe location on xxx array | file location (canonical)
 
 
 http://onsnetwork.org/halfshell/2015/02/20/differential-methylation-in-the-kitchen/
