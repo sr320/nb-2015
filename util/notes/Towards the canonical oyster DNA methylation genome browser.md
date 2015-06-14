@@ -32,7 +32,9 @@ T3D5 | 120hpf larvae from `M3` methylation 5x | [preprint](http://biorxiv.org/co
 4M-HS.bedgraph.tdf | RNA-seq from `ind.#4` above - post-heatshock | [notebook](http://onsnetwork.org/halfshell/2015/02/26/heating-up-the-beds/), [draft](https://www.authorea.com/users/3858/articles/18000/_show_article)
 6M-HS.bedgraph.tdf | RNA-seq from `ind.#6` above - post-heatshock | [notebook](http://onsnetwork.org/halfshell/2015/02/26/heating-up-the-beds/), [draft](https://www.authorea.com/users/3858/articles/18000/_show_article)
 mgaveryDMRs_112212.gff | EE2 exposure DMRs (array) - three oysters | [draft](https://docs.google.com/document/d/1JaXBgDP_BECybpc4RKxhRPYqiaH9Mj2hMvo68tlt-n4/edit)
-
+A01.smoothed | EE2 exposure array data - `indA01` | [draft](https://docs.google.com/document/d/1JaXBgDP_BECybpc4RKxhRPYqiaH9Mj2hMvo68tlt-n4/edit)
+A02.smoothed | EE2 exposure array data - `indA02` | [draft](https://docs.google.com/document/d/1JaXBgDP_BECybpc4RKxhRPYqiaH9Mj2hMvo68tlt-n4/edit)
+A02.smoothed | EE2 exposure array data - `indA03` | [draft](https://docs.google.com/document/d/1JaXBgDP_BECybpc4RKxhRPYqiaH9Mj2hMvo68tlt-n4/edit)
 ---
 
 anyone should be able to render this in IGV with this `session file`:
