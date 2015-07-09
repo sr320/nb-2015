@@ -1,0 +1,189 @@
+6-phosphofructokinase
+A disintegrin and metalloproteinase with thrombospondin motifs 9
+Acetyl-CoA carboxylase
+Actin-1/3
+Activator of 90 kDa heat shock protein ATPase homolog 1
+ADAM 17-like protease
+Adenylate cyclase type 3
+ADP-sugar pyrophosphatase
+Alkaline ceramidase 3
+Alpha-aminoadipic semialdehyde synthase, mitochondrial
+Ankyrin repeat and death domain-containing protein 1A
+Ankyrin repeat domain-containing protein 17
+Ankyrin-2
+ATP-dependent DNA helicase recQ
+Atrial natriuretic peptide receptor 3
+cAMP-specific 3',5'-cyclic phosphodiesterase 4B
+Caspase recruitment domain-containing protein 11
+Caspase-6
+Centrosome and spindle pole associated protein 1
+Checkpoint protein HUS1
+Chromodomain-helicase-DNA-binding protein 1
+Complement C1q tumor necrosis factor-related protein 3
+CUB and sushi domain-containing protein 1
+Cyclic nucleotide-gated cation channel beta-1
+Cytochrome c oxidase assembly protein COX11, mitochondrial
+Cytochrome P450 4Z1
+Cytosolic 10-formyltetrahydrofolate dehydrogenase
+Dedicator of cytokinesis protein 1
+Deleted in malignant brain tumors 1 protein
+Disks large homolog 5
+DNA damage-regulated autophagy modulator protein 2
+DNA polymerase III polC-type
+DNA-directed RNA polymerases I, II, and III subunit RPABC3
+DnaJ homolog subfamily A member 2
+DnaJ homolog subfamily C member 28
+Dynein gamma chain, flagellar outer arm
+Dynein heavy chain 1, axonemal
+Dynein heavy chain 2, axonemal
+E3 ubiquitin-protein ligase IAP-3
+E3 ubiquitin-protein ligase parkin
+Ectonucleotide pyrophosphatase/phosphodiesterase family member 3
+Endonuclease V
+Endothelin-converting enzyme 1
+Ephrin type-B receptor 2
+Epidermal growth factor receptor
+Exocyst complex component 2
+Exosome complex component RRP43
+Exportin-7
+Eyes absent homolog 1
+F-box-like/WD repeat-containing protein TBL1X
+Far upstream element-binding protein 3
+Fibropellin-3
+Flotillin-1
+FMRFamide receptor
+Fucolectin
+G2/M phase-specific E3 ubiquitin-protein ligase
+Galactose-1-phosphate uridylyltransferase
+Gastrula zinc finger protein XlCGF7.1
+Glutamate receptor 4
+Glutathione synthetase
+GPI ethanolamine phosphate transferase 3
+Helicase SRCAP
+Hepatoma-derived growth factor-related protein 3
+Histone-lysine N-methyltransferase MLL3
+Homeobox expressed in ES cells 1
+Hypoxia up-regulated protein 1
+Importin-4
+Importin-7
+Inositol 1,4,5-trisphosphate receptor
+Interaptin
+Kelch-like protein 13
+Kelch-like protein 24
+Kelch-like protein 3
+Kinesin-like protein KIF26B
+Lachesin
+Latrophilin-1
+Leucine carboxyl methyltransferase 2
+Lipoxygenase homology domain-containing protein 1
+MATH and LRR domain-containing protein PFE0570w
+Meiotic recombination protein REC8 homolog
+Methylcrotonoyl-CoA carboxylase subunit alpha, mitochondrial
+Mitogen-activated protein kinase mpkC
+Molybdenum cofactor sulfurase
+MORC family CW-type zinc finger protein 2
+Multiple epidermal growth factor-like domains protein 6
+Myosin-XV
+N-acetylglucosamine-1-phosphodiester alpha-N-acetylglucosaminidase
+N-lysine methyltransferase SETD8-A
+N,N'-diacetylchitobiase
+NAD-dependent deacetylase sirtuin-7
+Nephrocystin-3
+Nesprin-1
+Neural cell adhesion molecule L1-like protein
+Neural-cadherin
+Neuroendocrine convertase 2
+Neurogenic locus Notch protein
+Nuclear pore complex protein Nup205
+Nuclear receptor 2C2-associated protein
+PH domain leucine-rich repeat-containing protein phosphatase 1
+Phospholipase DDHD1
+Poly [ADP-ribose] polymerase 14
+Polyphosphoinositide phosphatase
+Potassium voltage-gated channel subfamily H member 7
+Presenilin-1
+Protein disulfide-isomerase A3
+Protein dopey-2
+Protein furry homolog-like
+Protein lap4
+Protein MB21D2
+Protein O-linked-mannose beta-1,2-N-acetylglucosaminyltransferase 1
+Protein phosphatase 1L
+Protein polybromo-1
+Protein quaking-B
+Protein SMG9
+Protein starmaker
+Protein timeless
+Proteoglycan 4
+Protocadherin Fat 3
+Protocadherin Fat 4
+Pumilio domain-containing protein KIAA0020 homolog
+Putative helicase Mov10l1
+Rab effector MyRIP
+RalA-binding protein 1-A
+Rap guanine nucleotide exchange factor 1
+Ras GTPase-activating protein nGAP
+Ras-associated and pleckstrin homology domains-containing protein 1
+Regulator of G-protein signaling 22
+RNA-binding protein Musashi homolog Rbp6
+Sal-like protein 1
+Scavenger receptor class F member 1
+Sel1 repeat-containing protein 1
+Semaphorin-1A
+Serine-protein kinase ATM
+Serine/threonine-protein kinase 31
+Serine/threonine-protein kinase atg1
+Serine/threonine-protein kinase ATR
+Serine/threonine-protein kinase MRCK alpha
+Serine/threonine-protein kinase RIO2
+Serine/threonine-protein phosphatase PP1-2
+Sestrin-1
+SH3 and multiple ankyrin repeat domains protein 3
+Sodium- and chloride-dependent glycine transporter 2
+Sodium-dependent glucose transporter 1
+Solute carrier family 22 member 5
+Sperm flagellar protein 1
+Steroid 17-alpha-hydroxylase/17,20 lyase
+Superoxide dismutase [Cu-Zn]
+Synembryn-A
+Syntaxin-binding protein 5
+Talin-1
+Talin-2
+THAP domain-containing protein 2
+Titin
+Trafficking protein particle complex subunit 6B
+Transcription elongation factor SPT5
+Translational activator GCN1
+Transmembrane and TPR repeat-containing protein 2
+Transmembrane protein 2
+Tripartite motif-containing protein 2
+Tripartite motif-containing protein 3
+tRNA-splicing ligase RtcB homolog
+Tryptophan--tRNA ligase, mitochondrial
+Tudor domain-containing protein 7B
+Tyrosine--tRNA ligase, cytoplasmic
+Tyrosine-protein kinase CSK
+Tyrosine-protein phosphatase 10D
+Ubiquitin-conjugating enzyme E2 Q2
+Ubiquitin-conjugating enzyme E2 U
+Ubiquitin-like modifier-activating enzyme 1
+Ubiquitin-like modifier-activating enzyme 6
+Uncharacterized glycosyltransferase AER61
+Uncharacterized membrane protein C20F10.07
+Uncharacterized protein C11orf73 homolog
+Uncharacterized protein C4orf37 homolog
+Uncharacterized protein C7orf46 homolog
+USP6 N-terminal-like protein
+Vacuolar protein sorting-associated protein 33B
+Vacuolar protein sorting-associated protein 4B
+Voltage-dependent L-type calcium channel subunit alpha-1C
+WASH complex subunit 7
+WD repeat-containing protein 11
+WD repeat-containing protein 19
+Williams-Beuren syndrome chromosomal region 16 protein homolog
+Xylulose kinase
+Zinc finger C3H1 domain-containing protein
+Zinc finger protein 40
+Zinc finger protein 596
+Zinc finger protein basonuclin-2
+Zinc transporter ZIP14
