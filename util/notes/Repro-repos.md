@@ -20,5 +20,69 @@ We also linked out to a webpage with more instructions <http://oystergen.es/bigi
 ---
 ###Case #2
 
+>Garcia-Vedrenne AE, Groner M, Page-Karjian A, Siegmund G-F, Singhal S, Sziklay J and Roberts SB. (2013) Development of Genomic Resources for a thraustochytrid Pathogen and Investigation of Temperature Influences on Gene Expression PLoS ONE 8(9): e74196. <doi:10.1371/journal.pone.0074196>
+
+In this particular case we cited the figshare repository in the paper itself.
 
 <img src="http://eagle.fish.washington.edu/cnidarian/skitch/PLOS_ONE__Development_of_Genomic_Resources_for_a_thraustochytrid_Pathogen_and_Investigation_of_Temperature_Influences_on_Gene_Expression_1BBEEEB4.png" alt="PLOS_ONE__Development_of_Genomic_Resources_for_a_thraustochytrid_Pathogen_and_Investigation_of_Temperature_Influences_on_Gene_Expression_1BBEEEB4.png"/>
+
+
+[![qpx](http://eagle.fish.washington.edu/cnidarian/skitch/QPX_Genome_Browser_Feature_Tracks_1BBEF2DB.png)](http://figshare.com/articles/QPX_Genome_Browser_Feature_Tracks/701214)  click to go to figshare page
+
+---
+
+###Case #3
+
+>Olson CE and Roberts SB. (2014). Genome-wide profiling of DNA methylation and gene expression in Crassostrea gigas male gametes Frontiers in Physiology. 5:224. doi: 10.3389/fphys.2014.0022
+
+This is an edge case where figshare was used for supplemental analysis, though a tiny bit of R code is part of the repo.
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/Frontiers___Genome-wide_profiling_of_DNA_methylation_and_gene_expression_in_Crassostrea_gigas_male_gametes___Invertebrate_Physiology_1BBEF472.png" alt="Frontiers___Genome-wide_profiling_of_DNA_methylation_and_gene_expression_in_Crassostrea_gigas_male_gametes___Invertebrate_Physiology_1BBEF472.png"/>
+
+
+
+[![olson](http://eagle.fish.washington.edu/cnidarian/skitch/Crassostrea_gigas_male_gonad_transcriptome_data_comparison_1BBEF4ED.png)](http://figshare.com/articles/Crassostrea_gigas_male_gonad_transcriptional_data_comparison/1004464)  click to go to figshare page
+
+
+
+----
+
+#Case 4
+
+>Timmins-Schiffman E, Coffey WD, Hua W, Nunn BL, Dickinson GH and Roberts SB. (2014). Shotgun proteomics reveals physiological response to ocean acidification in Crassostrea gigas BMC Genomics 2014, 15:951 doi:10.1186/1471-2164-15-951
+
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/BMC_Genomics___Full_text___Shotgun_proteomics_reveals_physiological_response_to_ocean_acidification_in_Crassostrea_gigas_1BBEF69E.png" alt="BMC_Genomics___Full_text___Shotgun_proteomics_reveals_physiological_response_to_ocean_acidification_in_Crassostrea_gigas_1BBEF69E.png"/>
+
+[![pan](http://eagle.fish.washington.edu/cnidarian/skitch/Timmins-Schiffman__E_et_al___2014___Shotgun_proteomics_reveals_physiological_response_to_ocean_acidification_in_Crassostrea_gigas_1BBEF6C2.png)](http://doi.pangaea.de/10.1594/PANGAEA.837671)
+
+
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/BMC_Genomics___Full_text___Shotgun_proteomics_reveals_physiological_response_to_ocean_acidification_in_Crassostrea_gigas_1BBEF5D2.png" alt="BMC_Genomics___Full_text___Shotgun_proteomics_reveals_physiological_response_to_ocean_acidification_in_Crassostrea_gigas_1BBEF5D2.png"/>
+
+
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/SQLShare_workflow_for_proteomics_analysis_1BBEF64E.png" alt="SQLShare_workflow_for_proteomics_analysis_1BBEF64E.png"/>
+
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/iPath2_supplemental_information_1BBEF672.png" alt="iPath2_supplemental_information_1BBEF672.png"/>
+
+###Case 5
+
+>Fuess LE, Eisenlord ME, Closek CJ, Tracy AM, Mauntz R, Gignoux-Wolfsohn S, Moritsch MM, Yoshioka R, Burge CA, Harvell CD, Friedman CS, Hewson I, Hershberger PK, Roberts SB (2015) Up in Arms: Immune and Nervous System Response To Sea Star Wasting Disease PLoS ONE doi:10.1371/journal.pone.0133053
+
+Here is where things start getting a little better...
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/PLOS_ONE__Up_in_Arms__Immune_and_Nervous_System_Response_to_Sea_Star_Wasting_Disease_1BBEF736.png" alt="PLOS_ONE__Up_in_Arms__Immune_and_Nervous_System_Response_to_Sea_Star_Wasting_Disease_1BBEF736.png"/>
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/PLOS_ONE__Up_in_Arms__Immune_and_Nervous_System_Response_to_Sea_Star_Wasting_Disease_1BBEF78F.png" alt="PLOS_ONE__Up_in_Arms__Immune_and_Nervous_System_Response_to_Sea_Star_Wasting_Disease_1BBEF78F.png"/>
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/eimd-sswd_v1_0__Supplemental_Jupyter_notebooks_and_data_1BBEF7FB.png" alt="eimd-sswd_v1_0__Supplemental_Jupyter_notebooks_and_data_1BBEF7FB.png"/>
+
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/sr320_eimd-sswd_1BBEF81A.png" alt="sr320_eimd-sswd_1BBEF81A.png"/>
+
+
+###Case 6
+
+>
