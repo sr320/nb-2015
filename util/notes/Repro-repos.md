@@ -1,4 +1,4 @@
-#Open Data and Reproducibility with Repos
+#9 ways to make papers a little more open and reproducible
 
 While we can certainly improve on our efforts to make our work open and reproducible, we have published a series of products over the last few years that have had associated code/data repositories that have accompanied the narratives (aka manuscripts). I will try to recap said efforts here as a means to show others different options, as well as point out ways we can improve going forward.
 
@@ -130,9 +130,21 @@ Another preprint, this time on bioRxiv. This is probably our most *reproducible*
 
 #Case 8
 
->Steven Roberts. (2015). paper-Oyster-EE2: v1.5. Zenodo. 10.5281/zenodo.19046 Influence of 17α-ethinylestradiol on DNA Methylation in Oysters
+>Influence of 17α-ethinylestradiol on DNA Methylation in Oysters paper-Oyster-EE2: v1.5. Zenodo. 0.5281/zenodo.19046 <https://github.com/sr320/paper-Oyster-EE2/blob/master/Gavery-Roberts-EE2.md>
+
+This is the most _different_. The entire work is on GitHub, doi'd with Zenodo.
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/sr320_paper-Oyster-EE2_1BC01BD3.png" alt="sr320_paper-Oyster-EE2_1BC01BD3.png"/> <https://github.com/sr320/paper-Oyster-EE2>
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/sr320_paper-Oyster-EE2_1BC01C04.png" alt="sr320_paper-Oyster-EE2_1BC01C04.png"/>
 
 
 ---
 
 #Case 9
+
+>Germline DNA methylation in reef corals: patterns and potential roles in response to environmental change- Draft @ <https://www.authorea.com/users/16716/articles/18248/_show_article> 
+
+This paper has a robust repo, it includes both Jupyter notebooks and R code. Also this is the first time we have used Authorea to draft the paper. It has been submitted and expected in Molecular Ecology. 
+
+<img src="http://eagle.fish.washington.edu/cnidarian/skitch/jldimond_Coral-CpG_1BC01D59.png" alt="jldimond_Coral-CpG_1BC01D59.png"/> <https://github.com/jldimond/Coral-CpG>
