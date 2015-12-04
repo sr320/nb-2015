@@ -1,0 +1,127 @@
+Seq-submit ::= {
+  sub {
+    contact {
+      contact {
+        name
+          name {
+            last "Gallardo" ,
+            first "Cristian" ,
+            middle "" ,
+            initials "" ,
+            suffix "" ,
+            title "" } ,
+        affil
+          std {
+            affil "Universidad de Concepcion" ,
+            div "Ocenography" ,
+            city "Concepcion" ,
+            country "Chile" ,
+            street "Barrio Universitario s/n" ,
+            email "crisgallardo@udec.cl" ,
+            postal-code "4300000" } } } ,
+    cit {
+      authors {
+        names
+          std {
+            {
+              name
+                name {
+                  last "Gallardo-Escarate" ,
+                  first "Cristian " ,
+                  middle "" ,
+                  initials "" ,
+                  suffix "" ,
+                  title "" } } } ,
+        affil
+          std {
+            affil "Universidad de Concepcion" ,
+            div "Ocenography" ,
+            city "Concepcion" ,
+            country "Chile" ,
+            street "Barrio Universitario s/n" ,
+            postal-code "4300000" } } ,
+      date
+        std {
+          year 2015 ,
+          month 12 ,
+          day 4 } } ,
+    subtype new ,
+    tool "tbl2asn 24.3 - MAC 386 on OS 10.6" } ,
+  data
+    entrys {
+      seq {
+        id {
+          local
+            str "contig840" } ,
+        descr {
+          molinfo {
+            biomol genomic } ,
+          pub {
+            pub {
+              gen {
+                cit "Unpublished" ,
+                authors {
+                  names
+                    std {
+                      {
+                        name
+                          name {
+                            last "Gallardo-Escarate" ,
+                            first "Cristian" ,
+                            initials "C." } } } } ,
+                title "Transcriptome mining: multigene panel to test delousing
+ drug response in the sea louse Caligus rogercresseyi" } } } ,
+          user {
+            type
+              str "NcbiCleanup" ,
+            data {
+              {
+                label
+                  str "method" ,
+                data
+                  str "SeriousSeqEntryCleanup" } ,
+              {
+                label
+                  str "version" ,
+                data
+                  int 8 } ,
+              {
+                label
+                  str "month" ,
+                data
+                  int 12 } ,
+              {
+                label
+                  str "day" ,
+                data
+                  int 4 } ,
+              {
+                label
+                  str "year" ,
+                data
+                  int 2015 } } } ,
+          create-date
+            std {
+              year 2015 ,
+              month 12 ,
+              day 4 } } ,
+        inst {
+          repr raw ,
+          mol dna ,
+          length 2285 ,
+          seq-data
+            ncbi2na '002C80134A400310FF8F022700F6D3CC3BBCB031718BD0E0C0CFF7210
+EF24013EC44D8FC34DB3CFBAF41F7F03C3153BCBF34703C33E013BF073FCE1E000330071BC6F3F
+411DCFF3EAF3F2090377F69730F3DC3A187DF08CFF00C08F249C3CCCFFFF883F7D0F5FCBF10C08
+CCF7FB2F0C73031310DC08001B8C80430C07FB2F3830EC8FCFBE3102E38043CC3C33DFECEF8307
+3FCCD2F00C3184FCFEFDFA9A2751D4334D84D0F20309257F738B33FAED1DBA868DD82F7F10FF75
+14A3FD27534D90263298E4876BC5B5582A58CECFEB387D57D6F083775A18074FABD6A0B3DA8D02
+EE29B23293F71CEBD597E3A8395D05DEED7FB901190B826F968A0139826FD7F3479EF13153DD78
+CF7D1DD208233768CA27FDFA176A3DBA5286C8C29FB8C8428AFB24C9590E00338697B96E30ED3C
+F488FDD23DB7FAC67F64FD0E286F8C0B53FFE86FB7FF7679ECE3A3DA337E34FD36CD6714082F4E
+07FB09DE804F58108A0833BEBD543DB6014A5EDD493FFE20BFB2CAE3C760DF57A2FEFF0D532913
+93C38ED42B085F804DFFE3833E1FD7A38FBFF76333D06078D54374886A7534F57D27F522B801EA
+809D7E68B2FD40EAD4E211350A023FF35FCCDA6F0FB7EA02F3A07BF8E147E7E3CEFE8D0EB8632C
+A129549B26EE0AFF9DF8067E0A4DFE032038E86278E52FB2AAA756092202A7DD4EA03A89F750B1
+538E997CAC0208806F0203830CF02510D35ECDFB0848A281EDBEFC39B3C00CDF80989B7BBFC39D
+FE78BF57F973CCBCF34FBB104E4C9EF9CE062E82AAEC125A5348112AE354439CF7CCC03C0'H } } } }
