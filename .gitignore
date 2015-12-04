@@ -7,3 +7,10 @@ Cv/data/cvir.v1.fa
 mykiss/data/Oncorhynchus_mykiss_scaffolds.fa.gz
 
 *.bam
+
+util/tmp/tbl2asn/Caligus_contigs.sqn-Mt
+
+util/tmp/tbl2asn/Caligus_contigs.sqn-techTSA
+
+util/tmp/tbl2asn/Contigs_Caligus.sqn
+
